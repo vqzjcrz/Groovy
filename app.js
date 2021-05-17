@@ -2,7 +2,7 @@ var imgs = document.querySelectorAll(".imgs");
 
 var json;
 
-fetch("https://api.reddit.com/r/cats.json").then(res => res.json()).then(j => json = j).then( () => {
+fetch("https://api.reddit.com/r/cats/random.json").then(res => res.json()).then(j => json = j).then( () => {
 
 var images = json.data.children;
 
