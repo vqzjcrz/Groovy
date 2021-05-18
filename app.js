@@ -1,15 +1,11 @@
-var imgs = document.querySelectorAll(".imgs");
+var arr;
 
-var json;
+fetch("/images").then(res => res.json()).then(r => arr = r).then( () => {
+var elements = document.querySelectorAll(".imgs");
+console.log(arr);
 
-fetch("https://api.reddit.com/r/UHDnsfw/random.json").then(res => res.json()).then(j => json = j).then( () => {
-console.log(json);
-var images = json.data.children;
-console.log(images);
-for(let i = 0; imgs.length; i++){
-
-    imgs[i].setAttribute("src", images[i].data.url);
-
+for(let i = 0; i < elements.length; i++){
+elements[i].setAttribute("src" , `./images/${arr[i]}`);
 }
 
 });
