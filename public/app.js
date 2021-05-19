@@ -1,6 +1,6 @@
 var arr;
 
-fetch("/images").then(res => res.json()).then(r => arr = r).then( () => {
+fetch("./public/images").then(res => res.json()).then(r => arr = r).then( () => {
 var elements = document.querySelectorAll(".imgs");
 console.log(arr);
 
@@ -15,7 +15,7 @@ function shuffleArray(a) {
 var array = shuffleArray(arr);
 
 for(let i = 0; i < elements.length; i++){
-elements[i].setAttribute("src" , `./images/${array[i]}`);
+elements[i].setAttribute("src" , `./public/images/${array[i]}`);
 }
 
 });
