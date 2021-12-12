@@ -110,17 +110,19 @@ fetch("./public/data.json").then(res => res.json()).then(j => array = j).then(()
 
         elements[i].setAttribute('src', `./public/${shuffle[i]}`);
 
-        elements[i].addEventListener('click', async () => {
+        elements[i].onclick = function(){
             alert("Copied Link To Clipboard");
 
             var txt = `https://empujateeste.github.io/Cats/public/${shuffle[i]}`;
-            var copyText = document.querySelector(".text");
-            copyText.value = txt;
-            copyText.select();
+            var tempInput = document.createElement("input");
+            tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+            tempInput.value = txt;
+            document.body.appendChild(tempInput);
+            tempInput.select();
             document.execCommand("copy");
+            document.body.removeChild(tempInput);
 
-
-        });
+        }
 
     }
 
