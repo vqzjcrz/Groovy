@@ -24,13 +24,26 @@ body{
     font-size: 18px;
     font-family:'JetBrains Mono', monospace;
 }
+.logo{
+    position:absolute;
+    height:8vh;
+    width:41vw;
+    color:$mainColor;
+    left:0;
+    padding-left:2rem;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    z-index:1;
+    background-color:$secondaryColor;
+}
 
 .nav{
     background-color: $secondaryColor;
-    position:relative;
+    position:absolute;
     top:0;
-    left:0;
-    width:100vw;
+    left:41vw;
+    width:59vw;
     min-height:8vh;
     display:flex;
     color:$secondaryTextColor;
@@ -46,6 +59,16 @@ body{
         line-height:8vh;
     }
 }
+.menu-bttn{
+    width:8vh;
+    height:8vh;
+    position:absolute;
+    background-color: $secondaryColor;
+    display:none;
+    z-index:1;
+    top:0;
+    right:0;
+}
 
 main{
     position:relative;
@@ -58,7 +81,7 @@ main{
 
 .main-content{
     position:relative;
-    top:4rem;
+    top:8rem;
     left:0;
     width:80%;
     height:auto;
@@ -89,6 +112,7 @@ main{
         width:8vh;
         height:8vh;
         position:absolute;
+        display:inline-block;
         background-color: red;
         z-index:1;
         top:0;
