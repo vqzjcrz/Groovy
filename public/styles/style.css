@@ -11,25 +11,45 @@
 
 html {
   max-width: 100vw;
-  height: 100%;
-  overflow:auto;
+  height: auto;
+  overflow-x: hidden;
 }
 
 body {
   position: relative;
   background-color: #E0CFC3;
   width: 100%;
-  height: 100%;
+  height: auto;
   font-size: 18px;
-  font-family: JetBrains Mono, monospace;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.logo {
+  position: absolute;
+  height: 8vh;
+  width: 41vw;
+  color: #E0CFC3;
+  left: 0;
+  padding-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  background-color: #222;
 }
 
 .nav {
   background-color: #222;
-  position: relative;
+  position: absolute;
   top: 0;
-  left: 0;
-  width: 100vw;
+  left: 41vw;
+  width: 59vw;
   min-height: 8vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,7 +60,6 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  z-index:1;
 }
 
 .nav .nav-items {
@@ -51,6 +70,17 @@ body {
   cursor: pointer;
   min-height: 8vh;
   line-height: 8vh;
+}
+
+.menu-bttn {
+  width: 8vh;
+  height: 8vh;
+  position: absolute;
+  background-color: #222;
+  display: none;
+  z-index: 1;
+  top: 0;
+  right: 0;
 }
 
 main {
@@ -67,7 +97,7 @@ main {
 
 .main-content {
   position: relative;
-  top: 4rem;
+  top: 8rem;
   left: 0;
   width: 80%;
   height: auto;
@@ -84,9 +114,8 @@ main {
   margin: 0 0 4rem 0;
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
   background-position: center;
-  box-shadow: 0px 0px 10px 0px #222;
 }
 
 @media only screen and (max-width: 900px) {
@@ -99,35 +128,19 @@ main {
     height: 8vh;
     color: #fff;
   }
-  .logo{
-    color: #fff;
-    position: relative;
-    top:50%;
-    transform:translateY(-50%);
-    padding-left:1rem;
-    font-size:1.2rem;
-  }
   .menu-bttn {
     width: 8vh;
     height: 8vh;
     position: absolute;
-    background-color: #222;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index: 2;
+    display: inline-block;
+    background-color: red;
+    z-index: 1;
     top: 0;
     right: 0;
   }
-  .msvg{
-    width:auto;
-    height:auto;
-    position:relative;
-    transition: transform 500ms ease-in-out;
-  }
   .nav {
     background-color: #222;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -152,12 +165,12 @@ main {
     transition: -webkit-transform 500ms ease-in-out;
     transition: transform 500ms ease-in-out;
     transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
-    padding:1rem;
   }
   .nav .nav-items {
     width: 100%;
     height: 100%;
     font-size: 1rem;
+    padding: 1rem;
     right: 0;
   }
 }
