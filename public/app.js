@@ -43,9 +43,29 @@ document.querySelector('.menu-bttn').addEventListener('click', () => {
 
 
 })
+document.querySelector('main').addEventListener('click', () => {
+
+    var menu = document.querySelector('.nav');
 
 
 
+    var arrow = document.querySelector('.msvg');
+
+
+
+    if(menu.style.transform == "translateY(0%)"){
+
+        menu.style.transform = "translateY(-100%)";
+
+        arrow.style.transform = "rotate(0deg) translateZ(0)";
+
+    }else{
+
+        return;
+
+    }
+
+});
 
 
 var array;
@@ -90,7 +110,17 @@ fetch("./public/data.json").then(res => res.json()).then(j => array = j).then(()
 
         elements[i].setAttribute('src', `./public/${shuffle[i]}`);
 
-        elements[i].addEventListener('click', () => alert(shuffle[i]));
+        elements[i].addEventListener('click', async () => {
+            alert("Copied Link To Clipboard");
+
+            var txt = `https://empujateeste.github.io/Cats/public/${shuffle[i]}`;
+            var copyText = document.querySelector(".text");
+            copyText.value = txt;
+            copyText.select();
+            document.execCommand("copy");
+
+
+        });
 
     }
 
