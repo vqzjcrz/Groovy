@@ -102,7 +102,6 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 12rem;
 }
 
 .main-content {
@@ -116,6 +115,7 @@ main {
   gap: 2rem;
   -ms-grid-columns: 25% 25% 25% 25%;
       grid-template-columns: 25% 25% 25% 25%;
+  margin:12rem;
 }
 
 .main-content .imgs {
