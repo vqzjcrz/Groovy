@@ -115,7 +115,7 @@ main {
   gap: 2rem;
   -ms-grid-columns: 25% 25% 25% 25%;
       grid-template-columns: 25% 25% 25% 25%;
-  margin:12rem;
+  margin-bottom: 12rem;
 }
 
 .main-content .imgs {
