@@ -18,7 +18,6 @@ html {
 
 body {
   position: relative;
-  background-color: /*#E0CFC3*/ #B6A8A5;
   width: 100%;
   min-height: 100vh;
   font-size: 18px;
@@ -140,6 +139,7 @@ main {
     height: 8vh;
     color: #fff;
     z-index: 1;
+    box-shadow: 0 0 10px 5px;
   }
   .logo {
     position: absolute;
