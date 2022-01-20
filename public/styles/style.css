@@ -47,10 +47,10 @@ body {
 .nav {
   background-color: #222;
   position: fixed;
-  top: 0;
+  top: -8vh;
   left: 41vw;
   width: 59vw;
-  min-height: 8vh;
+  min-height: 16vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
