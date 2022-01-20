@@ -148,6 +148,7 @@ main {
     width:100vw;
     height:8vh;
     background-color:#222;
+    z-index:6;
   }
   .logo {
     position: absolute;
